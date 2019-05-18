@@ -1,9 +1,10 @@
-/**
- * @format
- */
+import { Navigation } from 'react-native-navigation';
 
-import { AppRegistry } from 'react-native';
-import App from './src/App';
-import { name as appName } from './app.json';
+import { registerScreen } from './src/utils';
+import { App } from './src/navigation';
 
-AppRegistry.registerComponent(appName, () => App);
+registerScreen();
+
+Navigation.events().registerAppLaunchedListener(() => {
+    App();
+});

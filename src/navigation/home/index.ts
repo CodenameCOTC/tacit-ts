@@ -5,5 +5,6 @@ import { componentName } from '../../constants';
 export const HomePage: LayoutStackChildren = {
     component: {
         name: componentName.home,
+        options: {},
     },
 };
